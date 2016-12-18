@@ -1,0 +1,5 @@
+cn/lzg/sdrdemo/service/UserOperationsService.class
+cn/lzg/sdrdemo/entity/User.class
+cn/lzg/sdrdemo/service/impl/JedisApiTest.class
+cn/lzg/sdrdemo/controller/UserController.class
+cn/lzg/sdrdemo/service/impl/UserOperationsServiceImpl.class
