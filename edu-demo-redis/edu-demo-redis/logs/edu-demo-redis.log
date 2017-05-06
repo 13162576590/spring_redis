@@ -1,0 +1,63 @@
+[INFO ][20170506 18:34:05,971][RedisTest:30] wusc=WuShuicheng
+[INFO ][20170506 18:34:05,975][RedisTest:34] wusc=WuShuicheng2
+[INFO ][20170506 18:34:05,976][RedisTest:38] wusc=null
+[INFO ][20170506 18:35:06,956][RedisTest:30] wusc=WuShuicheng
+[INFO ][20170506 18:35:06,963][RedisTest:34] wusc=WuShuicheng2
+[INFO ][20170506 18:35:06,964][RedisTest:38] wusc=WuShuicheng2
+[INFO ][20170506 18:38:00,883][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@69198891: startup date [Sat May 06 18:38:00 CST 2017]; root of context hierarchy
+[INFO ][20170506 18:38:01,033][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[ERROR][20170506 18:38:01,479][RedisSpringTest:48] ==>RedisSpringTest context start error:
+org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from class path resource [spring/spring-context.xml]; nested exception is java.lang.UnsupportedClassVersionError: javax/annotation/ManagedBean : Unsupported major.minor version 51.0
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:412)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:243)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at wusc.edu.demo.redis.RedisSpringTest.main(RedisSpringTest.java:23)
+Caused by: java.lang.UnsupportedClassVersionError: javax/annotation/ManagedBean : Unsupported major.minor version 51.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters(ClassPathScanningCandidateComponentProvider.java:229)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.<init>(ClassPathScanningCandidateComponentProvider.java:115)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.<init>(ClassPathBeanDefinitionScanner.java:138)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.<init>(ClassPathBeanDefinitionScanner.java:112)
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.createScanner(ComponentScanBeanDefinitionParser.java:129)
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.configureScanner(ComponentScanBeanDefinitionParser.java:99)
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.parse(ComponentScanBeanDefinitionParser.java:83)
+	at org.springframework.beans.factory.xml.NamespaceHandlerSupport.parse(NamespaceHandlerSupport.java:73)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1438)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1428)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:185)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:139)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:108)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 14 more
+[INFO ][20170506 18:40:19,277][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bc168e5: startup date [Sat May 06 18:40:19 CST 2017]; root of context hierarchy
+[INFO ][20170506 18:40:19,416][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170506 18:40:19,845][ClassPathScanningCandidateComponentProvider:231] JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO ][20170506 18:40:19,921][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-redis.xml]
+[INFO ][20170506 18:40:20,178][DefaultListableBeanFactory:598] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@ea1a8d5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,jedisPoolConfig,shardedJedisPool,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO ][20170506 18:40:20,498][RedisSpringTest:36] wusc=WuShuicheng
+[INFO ][20170506 18:40:20,498][RedisSpringTest:40] wusc=WuShuicheng2
+[INFO ][20170506 18:40:20,499][RedisSpringTest:44] wusc=null
+[INFO ][20170506 18:40:20,500][RedisSpringTest:51] ===>System.exit
